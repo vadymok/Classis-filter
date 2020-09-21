@@ -1,0 +1,312 @@
+/*FILTR PRODUKTŮ*/
+
+#filters-wrapper {
+    margin-bottom: 20px;
+    border: 1px solid #ededed;
+}
+.category-header {
+    margin-bottom: 0;
+}
+
+.filter-section {
+    border: 0;
+    padding: 0;
+}
+
+.filter-section form {
+    display: none;
+    padding: 0 20px 10px 20px;
+    left: 25%;
+    position: absolute;
+    top: 0;
+    width: 75%;
+}
+
+.filter-section.otevreny form {
+    display: block;
+}
+
+.filter-section>h4 {
+    cursor: pointer;
+    margin: 0 0 -1px 0 !important;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    text-align: left;
+    font-weight: 300 !important;
+    font-size: 14px;
+    width: 25%;
+    border-left: 0;
+    line-height: 30px;
+    /* padding-bottom: 15px; */
+}
+
+.filter-section.otevreny>h4 {
+    border-right: 0;
+    background-color: #fff;
+    font-weight: 400 !important;
+}
+
+.filter-section:first-child>h4 {
+    border-top: 0;
+}
+
+#category-filter-hover {
+    position: relative;
+    padding: 0;
+}
+
+#param-filter-left {
+    width: 72%;
+    order: 1;
+}
+
+#param-filter-center {
+    width: 100%;
+    order: 3;
+    background-color: #eee;
+    padding: 4px 0 7px 0;
+    margin-top: 7px;
+}
+
+#param-filter-right {
+    width: 28%;
+    order: 2;
+}
+
+#param-filter-left label {
+    padding-right: 0;
+    width: auto;
+    margin-right: 40px;
+}
+
+.sklad {
+    color: #78a206;
+}
+#filters .filter-section form {
+    max-height: unset;
+}
+
+/*
+
+Vybrané filtry
+
+*/
+
+.vybrane-filtry::before{
+    content: "Zvolené parametry";
+    background: #ededed;
+    color: #464646;
+    display: block;
+    margin: -10px -20px 10px -20px;
+    padding: 7px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.vybrane-filtry { 
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border: 1px solid #dbdbdb;
+}
+.vybrane-filtry input[type="checkbox"]:checked + label::before, .vybrane-filtry input[type="radio"]:checked + label::before{content: "\e912";font-family: shoptet;background: none !important;display: inline-block;vertical-align: middle;font-size: 7px;line-height: 16px;border: 0;position: relative;top: -1px;transform: none;height: auto;width: auto;margin-right: 3px;color: #999;}
+.vybrane-filtry input[type="checkbox"]:checked + label::after, .vybrane-filtry input[type="radio"]:checked + label::after{content: ",";background: none;border: 0;width: auto;height: auto;display: inline-block !important;position: relative;left: -3px;top: auto;transform: none;}
+.vybrane-filtry .filter-section label.active {font-weight: 400; padding: 0; margin-right: 5px;}
+.vybrane-filtry .filter-count{display: none;}
+.vybrane-filtry .filter-section fieldset div, .vybrane-filtry h4, .vybrane-filtry form {display: inline-block;}
+
+.vybrane-filtry h4 span::after {
+    content: ":";
+}
+.vybrane-filtry h4::before{display: none;}
+#filters .vybrane-filtry h4{margin-right: 5px !important;margin-bottom: 0 !important;text-transform: none; border: 0 !important; padding: 0 !important;}
+.sidebar h4 span{background-color: transparent;}
+.vybrane-filtry .filter-section fieldset > div:last-of-type > label::after, .vybrane-filtry .filter-section fieldset > div > div:last-of-type > label::after{display: none !important;}
+.vybrane-filtry .filter-section:not(.filter-section-default) {padding: 5px 0 !important; border-top: 0 !important;border-bottom: 1px solid #e0e0e0;}
+.vybrane-filtry .filter-section form{margin-bottom: 0 !important;}
+.param-filter-top .filter-section:last-of-type{border-bottom: 0;}
+.vybrane-filtry .param-filter-top{margin-bottom: 0;}
+.vybrane-filtry .param-filter-top form{width: 100%;}
+.vybrane-filtry .param-filter-top form .aktivni-filtr{padding: 5px 0 !important;border-bottom: 1px solid #e0e0e0; width: 100%;}
+.vybrane-filtry .param-filter-top input[type="checkbox"]:checked + label::after{display: none;}
+.vybrane-filtry .advanced-filters-wrapper .advanced-parameter{display: none;}
+.vybrane-filtry .advanced-filters-wrapper .filter-label{display: block !important;}
+.vybrane-filtry .advanced-filters-wrapper > div {width: auto;}
+
+.vybrane-filtry form {
+    padding: 0;
+    left: 120px;
+}
+.vybrane-filtry .filter-section {
+    position: relative;
+}
+.vybrane-filtry h4 {
+    background-color: unset;
+}
+#content .vybrane-filtry .filter-section fieldset  .aktivni-filtr {
+    width: unset;
+}
+#content .vybrane-filtry form {
+    display: inline-flex;
+    left: unset;
+    padding-left: 10px;
+}
+.vybrane-filtry form fieldset {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.vybrane-filtry .advanced-filters-wrapper {
+    display: none!important;
+}
+.vybrane-filtry h4 {
+    width: fit-content;
+    width: -moz-fit-content;
+    font-weight: bold;
+}
+#clear-filters {
+    margin-top: 10px;
+}
+.vybrane-filtry .filter-section {
+    font-size: 12px;
+}
+#clear-filters {
+    text-transform: inherit;
+}
+/*
+KOnec Vybraných filtrů
+*/
+.param-filter-top {
+    text-align: left;
+    min-height: 81px;
+    width: 60%;
+    padding: 10px 35px 15px 15px;
+    float: left;
+}
+.top-filters .slider-wrapper {
+    width: 40%;
+    min-height: 81px;
+    float: right;
+    padding: 10px 35px 15px 15px;
+}
+#filters > .filter-sections {
+    display: none;
+}
+.param-filter-top form fieldset > div {
+    display: inline-block;
+    width: 160px;
+    padding-bottom: 5px;
+}
+.filter-count {
+    padding: 0;
+}
+.filter-label:hover {
+    text-decoration: underline;
+}
+.param-filter-top .filter-count {
+    display: none;
+}
+input[type="checkbox"] + label::before, input[type="radio"] + label::before {
+    border-color: #000;
+}
+.ShowData {
+    padding: 0 20px;
+    margin: 0 0 0 5px;
+    line-height: 39px;
+    border: none;
+}
+.ShowData::after {
+    content: '\e90e';
+    font-family: shoptet;
+    display: inline-block;
+    font-size: 10px;
+    line-height: 12px;
+    vertical-align: middle;
+    padding-left: 1em;
+}
+.ShowData span {
+    height: 20px;
+}
+
+.ShowData.active::after {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    padding-left: 0;
+    padding-right: 1em;
+}
+
+#filters > .filter-sections {
+    border-top: 5px solid #ededed;
+    padding: 15px;
+    margin-bottom: 5px;
+}
+
+#category-filter-hover .filter-section h4 {
+    background: #ededed;
+    padding: 10px 30px;
+}
+#category-filter-hover .filter-section h4 span {
+    color: #34495e;
+    font-weight: 700;
+    padding: 10px 30px;
+    font-size: 14px;
+}
+#category-filter-hover .filter-section.otevreny h4 {
+    border: 1px solid #dbdbdb;
+    background: #fff;
+    border-right: 0;
+    color: #000;
+    position: relative;
+    z-index: 2;
+}
+#category-filter-hover .filter-section.otevreny h4 span {
+    color: #000;
+}
+
+#category-filter-hover .filter-section form {
+    padding: 15px 0 25px 35px;
+    float: left;
+    border: 1px solid #dbdbdb;
+    border-radius: 0 3px 3px 3px;
+    -webkit-border-radius: 0 3px 3px 3px;
+    -moz-border-radius: 0 3px 3px 3px;
+    margin-left: -1px;
+    z-index: 1;
+}
+
+.filter-section form {
+    height: 100%;
+    min-height: 100%;
+}
+
+#content .filter-section fieldset div {
+    position: relative;
+    width: 33.33333%;
+    padding-right: 10px;
+    display: inline-block;
+    vertical-align: top;
+    float: none;
+}
+
+.filter-section form fieldset div span::before {
+    content: '(';
+}
+.filter-section form fieldset div span::after {
+    content: ')';
+}
+
+.filter-section form fieldset div span {
+    font-size: 11px;
+    color: #787878;
+    font-weight: 300;
+    margin-left: 1px;
+}
+
+.vybrane-filtry {
+    position: relative;
+}
+
+
+
+
