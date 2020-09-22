@@ -128,6 +128,7 @@ pokud ne tak přidá defaultně hodnota do localstorage "1"
 
   * Řádek 39 - vzniká chyba pokud LoiscalStorage is empty (nepomáhá přidání hodnoty do LocalStorage na řádku 37)
 
+
 */
 
 
